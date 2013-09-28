@@ -1,0 +1,351 @@
+# MIT License
+# 
+# Copyright (c) 2013 Steven Kowal 
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+# P-ROC Game Description file for Tron Legacy
+
+PRGame:
+    machineType: sternSAM
+    numBalls: 4
+PRFlippers:
+    - flipperLwR
+    - flipperLwL
+    - flipperUpL
+PRBumpers:
+    - slingL
+    - slingR
+    - popL
+    - popR
+    - popB
+PRSwitches:
+    leftCoinSlot:
+        number: SD1
+    centerCoinSlot:
+        number: SD2
+    rightCoinSlot:
+        number: SD3
+    fourthCoinSlot:
+        number: SD4
+    fifthCoinSlot:
+        number: SD5
+    flipperLwL:
+        number: SD9
+    flipperLwR:
+        number: SD11
+    flipperUpL:
+        number: SD13
+    tilt: 
+        number: SD17
+    slamTilt: 
+        number: SD18
+    ticketNotch: 
+        number: SD19
+    exit: 
+        number: SD21
+    down: 
+        number: SD22
+    up: 
+        number: SD23
+    enter: 
+        number: SD24
+    tron4:
+        number: S01
+    tron3:
+        number: S02
+    tron2:
+        number: S03
+    tron1:
+        number: S04
+    zuse1:
+        number: S07
+    zuse2:
+        number: S08
+    videoGameEject:
+        number: S11
+    zenRollover:
+        number: S12
+    zuse4:
+        number: S13
+    clu2:
+        number: S14
+    tournyStartButton: 
+        number: S15
+    startButton: 
+        number: S16
+    trough4:
+        number: S18
+    trough3:
+        number: S19
+    trough2:
+        number: S20
+    trough1:
+        number: S21
+    troughJam:
+        number: S22
+    shooterR:
+        number: S23
+    outlaneL:
+        number: S24
+    clu1:
+        number: S25
+    slingL: 
+        number: S26
+    slingR: 
+        number: S27
+    clu3:
+        number: S28
+    outlaneR:
+        number: S29
+    popL:
+        number: S30
+    popR:
+        number: S31
+    popB:
+        number: S32
+    rampExitR:
+        number: S34
+    rampEntranceL:
+        number: S35
+    orbitSpinnerR:
+        number: S36
+    rampExitL:
+        number: S37
+    rampEntranceR:
+        number: S38
+    innerLoopR:
+        number: S39
+    discOpto:
+        number: S41
+    orbitL:
+        number: S43
+    spinnerL:
+        number: S44
+    orbitR: 
+        number: S46
+    zuse3:
+        number: S48
+    recognizBankL:
+        number: S49
+    recognizBankC:
+        number: S50
+    recognizBankR:
+        number: S51
+    bankMotorDown:
+        number: S52
+    bankMotorUp:
+        number: S53
+PRCoils:
+    trough:
+        number: C01
+    shooterR:
+        number: C02
+    diskDirectionRelay:
+        number: C03
+    videoGameEject:
+        number: C04
+    diskMotorPower:
+        number: C05
+    recognizerMotor:
+        number: C06
+    orbitPost:
+        number: C07
+    shakerMotor:
+        number: C08
+    popL:
+        number: C09
+    popR:
+        number: C10
+    popB:
+        number: C11
+    flipperUpLMain:
+        number: C12
+    slingL:
+        number: C13
+    slingR:
+        number: C14
+    flipperLwLMain:
+        number: C15
+    flipperLwRMain:
+        number: C16
+    flasherZen:
+        number: C17
+    flasherVideoGame:
+        number: C18
+    flasherBackC:
+        number: C19
+    flasherApronL:
+        number: C20 
+    flasherApronR:
+        number: C21
+    flasherLowerL:
+        number: C22
+    flasherLowerR: 
+        number: C23
+    optionalCoil: 
+        number: C24
+    flasherBackL: 
+        number: C25
+    flasherDiscL: 
+        number: C26
+    flasherDiskR: 
+        number: C27
+    flasherBackpanel: 
+        number: C28
+    flasherRecognizer:
+        number: C29
+    diskMotorRelay: 
+        number: C30
+    flasherDiscL: 
+        number: C31
+    flasherDiscR: 
+        number: C32
+PRLamps:
+    startButton:
+        number: L01
+    tournyStartButton:
+        number: L02
+    shootAgain:
+        number: L03
+    centerFlynn:
+        number: L04
+    centerGem:
+        number: L05
+    centerClu:
+        number: L06
+    centerZuse:
+        number: L07
+    outlaneL:
+        number: L08
+    clu1:
+        number: L09
+    zuse4:
+        number: L10
+    clu2:
+        number: L11
+    clu3:
+        number: L12
+    outlaneR:
+        number: L13
+    tron4:
+        number: L14
+    tron3:
+        number: L15 
+    tron2:
+        number: L16
+    tron1:
+        number: L17
+    tronDoubleScoring:
+        number: L18
+    bumpers:
+        number: L19
+    spinners:
+        number: L20
+    centerPortal:
+        number: L21
+    centerTron:
+        number: L22
+    centerRecognizer:
+        number: L23
+    centerLightCycle:
+        number: L24
+    centerDisc:
+        number: L25
+    centerQuorra:
+        number: L26
+    ejectClu:
+        number: L27
+    ejectPortal:
+        number: L28
+    ejectQuorra:
+        number: L29
+    ejectLightCycle:
+        number: L30
+    ejectExtraBall:
+        number: L31
+    orbitCluR:
+        number: L32
+    zuse4:
+        number: L33
+    orbitLightCycleR:
+        number: L34
+    flynnsArcade:
+        number: L35
+    loopArrowR:
+        number: L37
+    orbitDiscR:
+        number: L38
+    rampLightCycleR:
+        number: L39
+    orbitCluL:
+        number: L40
+    zuse1:
+        number: L41
+    rampLightCycleL:
+        number: L42
+    zuse2:
+        number: L43
+    recogniozerBank:
+        number: L44
+    loopInnerCluL:
+        number: L45
+    advanceQuorra:
+        number: L48
+    loopInnerLightCycleR:
+        number: L49
+    rampDiscR:
+        number: L50
+    loopInnerDiscR:
+        number: L51
+    rampArrowR:
+        number: L52
+    loopInnerArrowR:
+        number: L53
+    loopInnerDiscL:
+        number: L55
+    loopInnerArrowL:
+        number: L56
+    rampArrowL:
+        number: L57
+    rampDiscL:
+        number: L58
+    orbitLightCycleL:
+        number: L59
+    popL:
+        number: L60
+    popR:
+        number: L61
+    popB:
+        number: L62
+    loopInnerLightCycleL:
+        number: L63
+    loopArrowL:
+        number: L64
+    orbitDiscL:
+        number: L66
+PRBallSave:
+    pulseCoils: [shooterR]
+    resetSwitches:
+        shooterR: open
+    stopSwitches:
+        shooterR: closed
+        # don't ball search if a flipper button is pressed
+        flipperLwL: closed
+        flipperLwR: closed
