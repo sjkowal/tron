@@ -20,8 +20,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-
 import procgame.game
+
+#minor change
 
 class FirstMode(procgame.game.Mode):
   def __init__(self, game):
