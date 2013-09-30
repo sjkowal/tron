@@ -21,7 +21,9 @@
 # THE SOFTWARE.
 
 import procgame.game
+import pinproc
 import trough
+import attract
 
 class FirstMode(procgame.game.Mode):
     def __init__(self, game):
@@ -46,7 +48,7 @@ class BaseGameMode(procgame.game.Mode):
         self.game.trough.changed_handlers.remove(self.trough_changed)
 
     def trough_changed(self):
-        if self.game.trough.is_full()
+        if self.game.trough.is_full():
             self.game.end_ball()
 
     def sw_popL_active_for_200ms(self, sw):
@@ -67,26 +69,27 @@ class TronGame(procgame.game.BasicGame):
     trough = None
     basic_game_mode = None
 
-    def __init__(self, machine_type):
-        super(ExampleGame, self).__init__('sternSAM')
+    def __init__(self):
+        super(TronGame, self).__init__(pinproc.MachineTypeSternSAM)
         self.load_config('tron.yaml')
         self.trough = trough.Trough(game=self)
         self.base_game_mode = BaseGameMode(game=self)
+        self.reset()
 
     def reset(self):
-        super(ExampleGame, self).reset()
+        super(TronGame, self).reset()
         self.modes.add(self.trough)
         self.modes.add(self.attract_mode)
 
-    def start_ball(self)
+    def start_ball(self):
         super(TronGame, self).start_ball()
 
-    def game_started(self)
+    def game_started(self):
         self.log("GAME STARTED")
         super(TronGame, self).game_started()
         # don't start_ball here
 
-    def ball_starting(self)
+    def ball_starting(self):
         self.log("BALL STARTING")
         super(TronGame, self).ball_starting()
         # TODO: Frist Check for ball in shooter lane
@@ -121,6 +124,6 @@ def main():
     finally:
         del game
 
-if __name__ == '__main__'
+if __name__ == '__main__':
     main()
 
