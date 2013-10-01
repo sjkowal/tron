@@ -37,7 +37,7 @@ class FirstMode(procgame.game.Mode):
 
 
 class BaseGameMode(procgame.game.Mode):
-    def __init(self, game):
+    def __init__(self, game):
         super(BaseGameMode, self).__init__(game=game, priority=1)
         pass
 
@@ -74,6 +74,7 @@ class TronGame(procgame.game.BasicGame):
         self.load_config('tron.yaml')
         self.trough = trough.Trough(game=self)
         self.base_game_mode = BaseGameMode(game=self)
+        self.attract_mode = attract.Attract(game=self)
         self.reset()
 
     def reset(self):
@@ -120,7 +121,7 @@ def main():
     game = None
     try:
         game = TronGame()
-        game.runloop()
+        game.run_loop()
     finally:
         del game
 

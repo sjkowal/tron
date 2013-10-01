@@ -78,7 +78,7 @@ class Attract(procgame.game.Mode):
 	def mode_started(self):
 		self.game.lamps.startButton.schedule(schedule=0xffff0000, cycle_seconds=0, now=False)
 		self.game.lamps.centerFlynn.enable()
-		self.game.lamps.centerGEM.enable()
+		self.game.lamps.centerGem.enable()
 		self.game.lamps.centerClu.enable()
 		self.game.lamps.centerZuse.enable()
 	

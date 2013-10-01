@@ -28,9 +28,7 @@ class Trough(procgame.game.Mode):
 
     # setup for Tron trough switches
 	trough_switch_names = ['trough1', 'trough2', 'trough3', 'trough4']
-	
 	changed_handlers = None
-	
 	ball_count = 0
 	
 	def __init__(self, game):
@@ -42,8 +40,7 @@ class Trough(procgame.game.Mode):
 	
 	def mode_started(self):
 		self._update_ball_count()
-		if self.game.switches.outhole.is_active():
-			self.game.coils.outhole.pulse()
+		self.game.coils.trough.pulse()
 	
 	def is_full(self):
 		return self.ball_count == self.game.num_balls_total
@@ -76,7 +73,7 @@ class Trough(procgame.game.Mode):
 	def _trough_switch_change_timer_expired(self):
 		self._update_ball_count()
 	
-	def sw_outhole_active_for_100ms(self, sw):
+	def sw_troughJam_active_for_500ms(self, sw):
 		# TODO: Check that the outhole switch goes inactive momentarily, else pulse again.
-		self.game.coils.outhole.pulse()
+		self.game.coils.trough.pulse()
 	
