@@ -51,6 +51,10 @@ class BaseGameMode(procgame.game.Mode):
         if self.game.trough.is_full():
             self.game.end_ball()
 
+    def sw_videoGameEject_active_for_1s(self, sw):
+		self.game.coils.flasherVideoGame.pulsed_patter(50,50,250,True)
+		self.game.coils.videoGameEject.pulse()
+
     def sw_popL_active_for_200ms(self, sw):
         self.game.coils.popL.pulse()
         self.game.lamps.popL.pulse(50)
@@ -114,7 +118,7 @@ class TronGame(procgame.game.BasicGame):
         self.log("GAME_ENDED")
         super(TronGame, self).game_ended()
         self.modes.remove(self.base_game_mode)
-        self.modds.add(self.attract_mode)
+        self.modes.add(self.attract_mode)
 
 ## main:
 def main():

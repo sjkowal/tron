@@ -48,9 +48,11 @@ class PrepareToStart(procgame.game.Mode):
 	def pulse_and_delay(self):
 		ready = self.check_ready()
 		if not ready:
+			self.game.coils.videoGameEject.pulse()
 			self.game.coils.popL.pulse()
 			self.game.coils.popR.pulse()
 			self.game.coils.popB.pulse()
+			self.game.coils.shooterR.pulse()
 			self.delay(name='pulse_and_delay',
 			           event_type=None,
 			           delay=5.0,
