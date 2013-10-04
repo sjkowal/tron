@@ -52,8 +52,8 @@ class BaseGameMode(procgame.game.Mode):
             self.game.end_ball()
 
     def sw_videoGameEject_active_for_1s(self, sw):
-		self.game.coils.flasherVideoGame.pulsed_patter(50,50,250,True)
-		self.game.coils.videoGameEject.pulse()
+        self.game.coils.flasherVideoGame.pulsed_patter(50,50,250,True)
+        self.game.coils.videoGameEject.pulse()
 
     def sw_popL_active_for_200ms(self, sw):
         self.game.coils.popL.pulse()
@@ -66,6 +66,114 @@ class BaseGameMode(procgame.game.Mode):
     def sw_popB_active_for_200ms(self, sw):
         self.game.coils.popB.pulse()
         self.game.lamps.popB.pulse(50)
+
+#pop bumper scoring
+    def sw_popL_active(self, sw):
+        self.game.score(100)
+        self.game.lamps.popL.pulse(50)
+
+    def sw_popR_active(self, sw):
+        self.game.score(100)
+        self.game.lamps.popR.pulse(50)
+
+    def sw_popB_active(self, sw):
+        self.game.score(100)
+        self.game.lamps.popB.pulse(50)
+
+#tron standup scoring
+    def sw_tron1_active(self, sw):
+        self.game.score(120)
+
+    def sw_tron2_active(self, sw):
+        self.game.score(120)
+
+    def sw_tron3_active(self, sw):
+        self.game.score(120)
+
+    def sw_tron4_active(self, sw):
+        self.game.score(120)
+
+#zuse standup scoring
+    def sw_zuse1_active(self, sw):
+        self.game.score(135)
+
+    def sw_zuse2_active(self, sw):
+        self.game.score(135)
+
+    def sw_zuse3_active(self, sw):
+        self.game.score(135)
+
+    def sw_zuse4_active(self, sw):
+        self.game.score(135)
+
+#clu rollovers
+    def sw_zenRollover_active(self,sw):
+        self.game.score(55)
+
+    def sw_clu1_active(self, sw):
+        self.game.score(66)
+
+    def sw_clu2_active(self, sw):
+        self.game.score(66)
+
+    def sw_clu3_active(self, sw):
+        self.game.score(66)
+
+#outlane rollovers
+    def sw_outlaneR_active(self, sw):
+        self.game.score(0)
+
+    def sw_outlaneL_active(self, sw):
+        self.game.score(0)
+
+#slings 
+    def sw_slingR_active(self, sw):
+        self.game.score(33)
+   
+    def sw_slingL_active(self, sw):
+        self.game.score(33)
+
+#rampR
+    def sw_rampEntranceR_active(self, sw):
+        self.game.score(999)
+
+    def sw_rampExitR_active(self, sw):
+        self.game.score(1000)
+ 
+#rampL
+    def sw_rampEntranceL_active(self, sw):
+        self.game.score(777)
+
+    def sw_rampExitL_active(self, sw):
+        self.game.score(888)
+
+#spinners
+    def sw_orbitSpinnerR_active(self, sw):
+        self.game.score(666)
+
+    def sw_spinnerL_active(self, sw):
+        self.game.score(666)
+
+#orbit
+    def sw_orbitL_active(self, sw):
+        self.game.score(5000)
+
+    def sw_orbitR_active(self, sw):
+        self.game.score(5000)
+
+    def sw_innerLoopR_active(self, sw):
+        self.game.score(10000)
+
+#recognizBank
+    def sw_recognizBankL_active(self, sw):
+        self.game.score(1200)
+
+    def sw_recognizBankC_active(self, sw):
+        self.game.score(1200)
+    
+    def sw_recognizBankR_active(self, sw):
+        self.game.score(1200)
+
 
 
 class TronGame(procgame.game.BasicGame):
